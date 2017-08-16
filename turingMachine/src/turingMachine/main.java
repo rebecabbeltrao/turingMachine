@@ -1,11 +1,15 @@
 package turingMachine;
 
+import util.ReadFile;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class main {
 	static turingMachine machine = new turingMachine();
 	private static Scanner input = new Scanner(System.in);
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		initialize();
 		String option;
 		do{
 		System.out.println("-- initialize --");
@@ -17,11 +21,15 @@ public class main {
 		System.out.println("Type your option:");
 		option = input.nextLine();
 		run(option.trim());
+
+
 		
 		} while(option != "4");	
 	}
-	public static void initialize(){
+	public static void initialize() throws IOException {
 		System.out.println("-- initialized machine --");
+
+		ReadFile readFile = new ReadFile();
 		
 	}
 	
