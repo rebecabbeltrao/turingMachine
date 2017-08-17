@@ -1,8 +1,11 @@
 package util;
 
 import java.io.*;
+import java.util.ArrayList;
+
 public class ReadFile{
 
+    public ArrayList<String[]> transicoes = new ArrayList<>();
 
     public ReadFile() throws IOException {
 
@@ -10,12 +13,19 @@ public class ReadFile{
             BufferedReader br = new BufferedReader(new FileReader("C:/Users/Manuel/Desktop/ReadFile.txt"));
             while(br.ready()){
                 String linha = br.readLine();
-                System.out.println(linha);
+                String[] transicao = linha.split(" ");
+                transicoes.add(transicao);
+                System.out.println(transicao);
             }
             br.close();
         }catch(IOException ioe){
             ioe.printStackTrace();
         }
     }
+
+    public ArrayList<String[]> getTransicoes(){
+        return transicoes;
+    }
+
 
 }

@@ -1,6 +1,14 @@
 package turingMachine;
 
+import java.util.ArrayList;
+
 public class turingMachine {
+
+	public ArrayList<String[]> transicoes;
+
+	public void setTransicoes(ArrayList<String[]> transicoes){
+		this.transicoes = transicoes;
+	}
 
 	public void runFullSpeed() {
 		// TODO Auto-generated method stub

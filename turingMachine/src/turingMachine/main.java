@@ -2,10 +2,13 @@ package turingMachine;
 
 import util.ReadFile;
 
+import javax.rmi.CORBA.Util;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
+
 	static turingMachine machine = new turingMachine();
 	private static Scanner input = new Scanner(System.in);
 	public static void main(String[] args) throws IOException {
@@ -30,7 +33,11 @@ public class main {
 		System.out.println("-- initialized machine --");
 
 		ReadFile readFile = new ReadFile();
-		
+		ArrayList<String[]> transicoes = readFile.getTransicoes();
+		machine.setTransicoes(transicoes);
+		//Util util = new Util();
+		//util.syso(transicoes);
+
 	}
 	
 	public static void run(String option){
