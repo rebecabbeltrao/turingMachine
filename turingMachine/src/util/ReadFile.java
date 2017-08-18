@@ -15,7 +15,7 @@ public class ReadFile{
                 String linha = br.readLine();
                 String[] transicao = linha.split(" ");
                 transicoes.add(transicao);
-                System.out.println(transicao);
+                //System.out.println(transicao);
             }
             br.close();
         }catch(IOException ioe){
@@ -26,6 +26,4 @@ public class ReadFile{
     public ArrayList<String[]> getTransicoes(){
         return transicoes;
     }
-
-
 }
