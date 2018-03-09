@@ -1,2 +1,2 @@
 # turingMachine
-Turing machin implementation for Theory of Computation course.
+Turing machine implementation for Theory of Computation course.
